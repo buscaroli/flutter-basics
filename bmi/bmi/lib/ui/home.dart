@@ -34,7 +34,7 @@ class HomeState extends State<Home>{
   void calculateBMI(double age, double height, double weight){
     setState((){
       _data.bmi_number = weight / ((height / 100) * (height / 100));
-      if (_data.bmi_number < 18.0) {
+      if (_data.bmi_number < 18.5) {
         _data.bmi_description = "UNDERWEIGHT";
       }
       else if (_data.bmi_number > 25.0) {
@@ -134,6 +134,7 @@ class HomeState extends State<Home>{
                           Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: RaisedButton(
+                              color: Colors.pinkAccent,
                               onPressed: (){
                                 print("Age: ${_data.age}");
                                 calculateBMI(double.parse(_userDataController1.text), double.parse(_userDataController2.text), double.parse(_userDataController3.text));
