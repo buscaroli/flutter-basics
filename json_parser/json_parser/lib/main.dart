@@ -11,7 +11,7 @@ import 'package:http/http.dart' as http;
 
 void main() async {
   List _data = await getJSON();
-  /* The two loops that follow have been used for debugging
+  /* The following two loops have been used for debugging
      purposes only
   // Printing the titles to the console with a for loop
   for (var i = 0; i < _data.length; i++){
